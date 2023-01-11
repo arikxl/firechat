@@ -1,0 +1,21 @@
+[debug] [2023-01-11T23:53:07.036Z] ----------------------------------------------------------------------
+[debug] [2023-01-11T23:53:07.040Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\97250\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2023-01-11T23:53:07.040Z] CLI Version:   11.20.0
+[debug] [2023-01-11T23:53:07.041Z] Platform:      win32
+[debug] [2023-01-11T23:53:07.041Z] Node Version:  v18.12.1
+[debug] [2023-01-11T23:53:07.043Z] Time:          Thu Jan 12 2023 01:53:07 GMT+0200 (שעון ישראל (חורף))
+[debug] [2023-01-11T23:53:07.044Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-01-11T23:53:07.055Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-01-11T23:53:07.056Z] > authorizing via signed-in user (arikxl@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\97250\OneDrive\Desktop\react\firechat
+
