@@ -1,12 +1,13 @@
-import { useState } from 'react';
 import Cookies from 'universal-cookie';
-import {signOut } from 'firebase/auth'
+import { signOut } from 'firebase/auth'
+import { useState } from 'react';
 
 import './App.css';
+import { auth } from './firebase-config'; 
 import Auth from './components/Auth';
 import Chat from './components/Chat';
 import Room from './components/Room';
-import { auth } from './firebase-config'; 
+import SignOutBtn from './components/SignOutBtn';
 
 const cookies = new Cookies();
 
@@ -22,24 +23,22 @@ function App() {
     setRoom(null);
   }
 
-
   return (
     <div className="App">
       {!isAuth
         ? <Auth setIsAuth={ setIsAuth} />
         : <>
-          {room
-            ? <Chat room={room}/>
-            : <Room setRoom={setRoom } />
-          }
-          <div className="sign-out">
-            <button onClick={signOutUser}>Sign Out</button>
-          </div>
+            {room
+            ? <Chat room={room} setRoom={setRoom} signOutUser={ signOutUser} />
+            :
+            <>
+              <Room setRoom={setRoom} />
+              <SignOutBtn signOutUser={ signOutUser} /> 
+            </>
+            }
+          
           </>
       }        
-      
-      
-   
     </div>
   );
 }

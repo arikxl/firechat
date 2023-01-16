@@ -1,15 +1,21 @@
-import React, { useState, useRef } from 'react';
+import React, { useRef } from 'react';
 import styled from 'styled-components';
 
-
 const RoomStyled = styled.section`
-  display: flex;
-  flex-direction: column;
+  max-width: 400px;
+  margin: 100px auto 0;
+  align-items: center;
+
+  form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
 
   label{
     text-align: center;
     font-size: 25px;
-    margin-bottom: 20px;
+    margin: 0 auto 20px; 
   }
 
   input {
@@ -20,7 +26,7 @@ const RoomStyled = styled.section`
     padding-left: 5px;
     font-size: 20px;
     text-align: center;
-    margin: 5px;
+    margin: 5px auto;
   }
 
   button {
@@ -31,10 +37,13 @@ const RoomStyled = styled.section`
     padding-left: 5px;
     font-size: 20px;
     text-align: center;
-    margin: 5px;
+    margin: 5px auto;
     background-color: #F5820B;
     color: white;
     cursor: pointer;
+    :hover{
+      background-color:rgb(255, 160, 0) ;
+    }
   }
 
 `;
@@ -43,14 +52,15 @@ const Room = ({ setRoom }) => {
 
     const roomInputRef = useRef(null);
 
-
   return (
-      <RoomStyled>
+    <RoomStyled>
+      <form onSubmit={() => setRoom(roomInputRef.current.value)}>
           <label >Enter Room Name:</label>
           <input ref={ roomInputRef } />
-          <button onClick={() => setRoom(roomInputRef.current.value)}>
+          <button type='submit'>
               Enter Chat
           </button>
+      </form>
       </RoomStyled>
   )
 }

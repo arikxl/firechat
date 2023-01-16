@@ -1,14 +1,15 @@
 import React from 'react';
 import styled from 'styled-components';
-import { signInWithPopup } from 'firebase/auth'
 import Cookies from 'universal-cookie';
+import { signInWithPopup } from 'firebase/auth'
 
 import { auth, provider} from '../firebase-config';
 
 const AuthStyled = styled.section`
   text-align: center;
+  justify-content: center;
+  margin-top:100px ;
 `;
-
 
 const AuthBtn = styled.button`
     width: 200px;
@@ -36,16 +37,13 @@ const Auth = ({ setIsAuth }) => {
             setIsAuth(true)
         } catch (err) {
             console.error(err);
-         }
-
-       
+        }
     }
-
 
     return (
         <AuthStyled>
             <p>Sign in with Google to connect</p>
-            <AuthBtn onClick={signInGoogle}>Sign in with Google</AuthBtn>
+            <AuthBtn onClick={signInGoogle}>Sign In</AuthBtn>
         </AuthStyled>
     )
 }
