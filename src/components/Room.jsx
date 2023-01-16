@@ -58,7 +58,7 @@ const Room = ({ setRoom }) => {
           <label >Enter Room Name:</label>
           <input ref={ roomInputRef } />
           <button type='submit'>
-              Enter Chat
+              Start Chatting
           </button>
       </form>
       </RoomStyled>

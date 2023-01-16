@@ -9,7 +9,6 @@ const SignOutBtnStyle = styled.button`
     border: none;
     justify-content: center;
     align-items: center;
-
     width: 210px;
     height: 40px;
     border-radius: 6px;
