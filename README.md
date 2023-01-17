@@ -9,6 +9,7 @@ It allows users to create and join chat rooms and send and receive messages.
 Installation:
 
 Clone the repository: git clone https://github.com/arikxl/firechat.git
+
 Install the dependencies: npm install
 Start the development server: npm start
 
